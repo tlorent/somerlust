@@ -1,0 +1,56 @@
+.row {
+    // max-width: If you have enough available space then you will have the width you specified, but if there is not enough width (so if the width of the vp is smaller than 1140px) then it will simply fill 100% of the available space it has.
+    // If there is 1140px available, the $grid-width, then you will get this for the row. However, if the width of the window is < 1140px, then it will just fill whatever space is available.
+    max-width: $grid-width;
+    // Auto means that left and right margin will be calculated by CSS. The margin will be the same for both sides.
+    margin: 0 auto;
+
+    // Select all rows but the last one.
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+
+    // Clear all the floats of the row's child elements (the columns).
+    @include clearfix;
+
+    // Select all class attributes of elements that start with col-.
+    [class^="col-"] {
+        float: left; 
+        
+        // Apply a margin to all columns except the last one.
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
+        }
+    }
+
+    // Take the entire width of a row, subtract the horizontal space between each column and divide that by two to get the width of one column.
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+
+    // Two times the horizontal gutter because there are two gutters between all the columns. Divide by three to get the width of one column.
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
+
+    // Two times the width of the simple 1-of-3 column (because you want 2-of-3, not 1-of-3). Add horizontal gutter that is between the simple 1-of-3 columns (this makes sure that you have "two of 1-of-3" columns).
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+    }
+
+    // Three times the horizontal gutter, because there are three gutters between all the columns. Divide by four to get the width of one column.
+    .col-1-of-4 {
+        position: relative;
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
+
+    // Two times a col-1-of-4, plus add the horizontal gutter that is between two columns to get two "1-of-4" columns.
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    }
+
+    // Three times a col-1-of-4, plus two times the horizontal gutter that is between three columns so you have three "1-of-4" columns.
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+    }
+}   

@@ -1,0 +1,39 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 4rem rgba(color(color-black), .4);
+        height: 20rem;
+        position: absolute;
+        transition: all .2s ease;
+        width: 55%;
+        z-index: 10;
+
+        &--p1 {
+            left: 0;
+            top: -2rem;
+        }
+
+        &--p2 {
+            top: 2rem;
+            right: 0;
+        }
+
+        &--p3 {
+            top: 10rem;
+            left: 10rem;
+        }
+
+        &:hover {
+            transform: scale(1.15);
+            z-index: 11;
+        }
+    }
+
+    // When hovering the composition class, select all elements with a class of photo that are not being hovered.
+    &:hover &__photo:not(:hover) {
+        transform: scale(.9);
+    }
+
+}

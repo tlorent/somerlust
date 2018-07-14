@@ -1,0 +1,26 @@
+// Universal reset.
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    // Set the box-sizing property of all elements, including any with the after or before pseudo classes, to inherit (because you specify that all element's box-sizing property should inherit its parent's box-sizing, everything inherits the box-sizing property of the body which is one of the top-most nodes). This ensures that you can still change the box-sizing property of some components, if you wish, to use something else than the border-box you use in body.
+    box-sizing: inherit;
+}
+
+html {
+    // This specifies the base definition for what a 1 rem should be. The default font-size of a browser is 16px, but to make our calculations easier we set it to 62.5% of 16 which is 10.
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 1.8rem;
+}
+
+main {
+    box-shadow: $box-shadow;
+    margin-bottom: 370px;
+    z-index: 400;
+    position: relative;
+}

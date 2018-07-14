@@ -1,0 +1,38 @@
+.program {
+
+    margin-top: 5rem;
+
+    &__photo {
+        background-position: top;
+        background-size: cover;
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 5rem rgba(color(color-black), .3);
+        height: 22rem;
+        transition: all .2s ease;
+        width: 95%;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: blur(2px) brightness(80%);
+        }
+    }
+
+    &__time {
+        color: #fff;
+        font-family: 'Shrikhand',
+        sans-serif;
+        font-size: 1.6rem;
+        left: 50%;
+        opacity: 0;
+        position: absolute;
+        top: 80%;
+        transform: translate(-50%, 90%);
+        transition: all .3s ease-out;
+        z-index: 10;
+    }
+
+    &__photo:hover + &__time {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+}

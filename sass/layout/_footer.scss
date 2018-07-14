@@ -1,0 +1,79 @@
+.footer {
+    background-color: color(light-grey);
+    bottom: 1.8rem;
+    height: 48rem;
+    font-size: 1.3rem;
+    padding: 15rem 0;
+    position: fixed;
+    text-align: center;
+    width: 97.5%;
+    z-index: 20;
+
+    &__logo-box {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__logo {
+        border-radius: 50%;
+        height: auto;
+        width: 15rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__link {
+        
+        transition: color .2s ease;
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: color(color-black);
+        }
+
+        &:hover {
+            color: darken(color(logo), 12%);
+        }
+    }
+
+    &__copyright {
+        margin-top: 4rem;
+        float: right;
+    }
+
+    &__made {
+        margin-top: 4rem;
+        float: left;
+
+        &--link {
+            color: color(color-black);
+            text-decoration: none;
+            transition: color .2s ease;
+
+            &:hover {
+                color: color(color-black-light)
+            }
+        }
+    }
+}
+
+.fa-heart {
+    
+    transition: color .3s ease;
+
+    &:hover {
+        color: red;
+    }
+    
+}

@@ -1,0 +1,37 @@
+// COLOURS
+
+$colors: (
+    light-grey: #e1eef6,
+    light-grey-2: #e1f2fc,
+    light-grey-3: #dbf1fe,
+    main-orange: #ff5f2e,
+    main-yellow: #fcbe32,
+    main-blue: #004e66,
+    color-black: #000,
+    color-black-light: rgba(0, 0, 0, 0.616),
+    color-white: #fafafa,
+    footer: #eaf4f4,
+    facebook: #3b5998,
+    instagram: #923CB6,
+    twitter: #00aced,
+    logo: #FBBD31
+);
+
+
+// MISC.
+
+$section-padding: 10rem 0;
+$box-shadow: 0 1.5rem 2rem rgba(color(color-black), .18);
+
+// GRID
+$grid-width: 114rem;
+
+// space between the columns
+
+$gutter-vertical: 4rem;
+$gutter-horizontal: 6rem;
+
+// FONTS
+
+$default-font-size: 1.7rem;
+$icon-font: 4.8rem;

@@ -1,0 +1,28 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "somerlust",
+    "main": "index.js",
+    "scripts": {
+        "watch": "node-sass sass/main.scss css/style.css -w",
+        "devserver": "live-server",
+        "start": "npm-run-all --parallel devserver watch",
+        "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+        "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+        "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    },
+    "author": "tim lorent",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^8.6.0",
+        "concat": "^1.0.3",
+        "gulp": "^3.9.1",
+        "node-sass": "^4.9.0",
+        "npm-run-all": "^4.1.3",
+        "postcss-cli": "^5.0.0"
+    },
+    "dependencies": {
+        "live-server": "^1.2.0"
+    }
+}

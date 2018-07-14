@@ -1,0 +1,27 @@
+.section-about {
+    background-color: color(light-grey);
+    text-align: center;
+    padding: 15rem 0;
+    // opacity: 0;
+}
+
+.section-artists {
+    background-color: color(color-white);
+    text-align: center;
+    // opacity: 0;
+    padding: 10rem 0;
+}
+
+.section-info {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(color(light-grey-3), .3),
+        rgba(color(color-black-light), .2)
+    ), 
+    url(../../img/party-8.jpg);
+    // background-image: url(../../img/party-3.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 10rem 0;
+}

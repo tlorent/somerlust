@@ -1,0 +1,32 @@
+.info-box {
+
+    background-color: rgba(color(color-white), .8);
+    border-radius: .3rem;
+    margin-top: 5rem;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all .2s ease;
+
+    &:hover {
+        transform: scale(1.05) translateY(-1rem);
+    }
+
+    &__icon {
+        background-clip: text;
+        background-image: linear-gradient(
+            to right,
+            rgba(color(main-yellow), .6),
+            rgba(color(main-yellow), .8)
+        );
+        color: transparent;
+        font-size: $icon-font;
+        padding: 0 0 2.5rem 0;
+    }
+
+    &__text {
+        color: color(color-black-light);
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+    }
+
+}

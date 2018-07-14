@@ -1,0 +1,94 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    &--main {
+        animation: moveInRight 1s ease-out;
+        display: block;
+        font-family: 'Knewave', sans-serif;
+        font-size: 6rem;
+        letter-spacing: .6rem;
+    }
+
+    &--sub {
+        animation: moveInLeft 1s ease-out;
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.3rem;
+        font-weight: 200;
+        letter-spacing: .7rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.heading-secondary {
+    color: #000;
+    display: inline-block;
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: .3rem;
+    margin-bottom: 1rem;
+    transform: skewX(17deg);
+    transition: all .2s ease;
+
+    &:hover {
+        transform: scale(1.1) skewX(17deg);
+    }
+
+    &--white {
+        color: color(color-white);
+    }
+    
+    &--faq {
+        font-size: 2rem;
+        margin: 3rem 0 0 0;
+    }
+}
+
+.heading-tertiary {
+    color: #fff;
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 2.3rem;
+    left: 50%;
+    letter-spacing: .2rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .2s ease;
+    z-index: 10;
+
+    &:hover ~ .program__photo {
+        transform: scale(1.05);
+        filter: blur(2px) brightness(80%);
+    }
+
+    &:hover ~ .program__time {
+        opacity: 1;
+        transform: translate(-50%, -20%);
+    }
+
+    &--info-box {
+        color: color(color-black-light);
+        font-size: 1.8rem;
+        margin-bottom: .8rem;
+        position: static;
+        text-transform: uppercase;
+    }
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    font-weight: 200;
+    line-height: 3rem;
+    margin-left: 7.5%;
+    width: 85%;
+
+    &--faq {
+        font-size: 1.5rem;
+        margin: .4rem 0;
+    }
+}
