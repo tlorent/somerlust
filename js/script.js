@@ -46,5 +46,5 @@ $(document).ready(function(){
 })
 
 const navCheckbox = document.querySelector('.navigation__checkbox')
-const navItems = document.querySelectorAll('.navigation__item')
+const navItems = document.querySelectorAll('.navigation__link')
 navItems.forEach(item => item.addEventListener('click', () => navCheckbox.checked = false))
